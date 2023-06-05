@@ -21,6 +21,9 @@
  */
 #pragma once
 
+#define NO_CONTROLLER_CUSTOM_WIRING_WARNING
+#define DIAG_JUMPERS_REMOVED
+
 // Created by configs generator for Professional firmware
 // https://github.com/mriscoc/Ender3V2S1
 
