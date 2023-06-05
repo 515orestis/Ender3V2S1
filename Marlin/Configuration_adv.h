@@ -621,8 +621,8 @@
  *
  * Define one or both of these to override the default 0-255 range.
  */
-#define FAN_MIN_PWM 160 // Ender Configs
-#define FAN_MAX_PWM 255
+#define FAN_MIN_PWM 50 // Ender Configs
+// #define FAN_MAX_PWM 128
 
 /**
  * Fan Fast PWM
@@ -684,7 +684,7 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN PB15
+#define E0_AUTO_FAN_PIN PC7
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
@@ -1188,8 +1188,8 @@
  *  X<1>         Set the given parameters only for the X axis.
  *  Y<1>         Set the given parameters only for the Y axis.
  */
-#define INPUT_SHAPING_X
-#define INPUT_SHAPING_Y
+// #define INPUT_SHAPING_X
+// #define INPUT_SHAPING_Y
 #if EITHER(INPUT_SHAPING_X, INPUT_SHAPING_Y)
 #if ENABLED(INPUT_SHAPING_X)
 #define SHAPING_FREQ_X 40    // (Hz) The default dominant resonant frequency on the X axis.
@@ -1201,7 +1201,7 @@
 #endif
 // #define SHAPING_MIN_FREQ  20        // By default the minimum of the shaping frequencies. Override to affect SRAM usage.
 // #define SHAPING_MAX_STEPRATE 10000  // By default the maximum total step rate of the shaped axes. Override to affect SRAM usage.
-#define SHAPING_MENU                // Add a menu to the LCD to set shaping parameters.
+// #define SHAPING_MENU                // Add a menu to the LCD to set shaping parameters.
 #endif
 
 // @section motion
