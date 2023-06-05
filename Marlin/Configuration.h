@@ -1674,7 +1674,7 @@
  */
 #define NOZZLE_TO_PROBE_OFFSET \
   {                            \
-    -41.5, -7, 0               \
+    -54, -27, -3.14            \
   } // MRiscoC BLTouch offset for support: https://www.thingiverse.com/thing:4605354 (z-offset = -1.80 mm)
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
