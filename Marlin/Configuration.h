@@ -1277,7 +1277,7 @@
  */
 #define DEFAULT_AXIS_STEPS_PER_UNIT \
   {                                 \
-    80, 80, 400, 93                 \
+    80, 80, 400, 150.2              \
   } // Ender Configs
 
 #define LIMITED_MAX_STEPS_EDITING
