@@ -1238,7 +1238,10 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 93 }  // Ender Configs
+#define DEFAULT_AXIS_STEPS_PER_UNIT \
+  {                                 \
+    80, 80, 400, 150.2                 \
+  } // Ender Configs
 
 #define LIMITED_MAX_STEPS_EDITING
 #if ENABLED(LIMITED_MAX_STEPS_EDITING)
@@ -1575,7 +1578,10 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -41.5, -7, 0 }  // MRiscoC BLTouch offset for support: https://www.thingiverse.com/thing:4605354 (z-offset = -1.80 mm)
+#define NOZZLE_TO_PROBE_OFFSET \
+  {                            \
+    -54, -27, -3.04            \
+  } // MRiscoC BLTouch offset for support: https://www.thingiverse.com/thing:4605354 (z-offset = -1.80 mm)
 
 // Enable and set to use a specific tool for probing. Disable to allow any tool.
 #define PROBING_TOOL 0
@@ -1641,8 +1647,8 @@
  * A total of 2 does fast/slow probes with a weighted average.
  * A total of 3 or more adds more slow probes, taking the average.
  */
-//#define MULTIPLE_PROBING 2
-//#define EXTRA_PROBING    1
+#define MULTIPLE_PROBING 4
+#define EXTRA_PROBING    1
 
 /**
  * Z probes require clearance when deploying, stowing, and moving between
@@ -2390,27 +2396,27 @@
 //
 // Preheat Constants - Up to 10 are supported without changes
 //
-#define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 195
-#define PREHEAT_1_TEMP_BED     60
+#define PREHEAT_1_LABEL "PLA"
+#define PREHEAT_1_TEMP_HOTEND 205
+#define PREHEAT_1_TEMP_BED 60
 #define PREHEAT_1_TEMP_CHAMBER 35
-#define PREHEAT_1_FAN_SPEED     128 // Value from 0 to 255
+#define PREHEAT_1_FAN_SPEED 160 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
 #define PREHEAT_2_TEMP_HOTEND 240
 #define PREHEAT_2_TEMP_BED     90
 #define PREHEAT_2_TEMP_CHAMBER 35
-#define PREHEAT_2_FAN_SPEED     128 // Value from 0 to 255
+#define PREHEAT_2_FAN_SPEED 160 // Value from 0 to 255
 
 #define PREHEAT_3_LABEL       "PETG"
 #define PREHEAT_3_TEMP_HOTEND 230
-#define PREHEAT_3_TEMP_BED     80
-#define PREHEAT_3_FAN_SPEED   128
+#define PREHEAT_3_TEMP_BED 80
+#define PREHEAT_3_FAN_SPEED 160
 
 #define PREHEAT_4_LABEL       "CUSTOM"
 #define PREHEAT_4_TEMP_HOTEND 190
-#define PREHEAT_4_TEMP_BED     50
-#define PREHEAT_4_FAN_SPEED   128
+#define PREHEAT_4_TEMP_BED 50
+#define PREHEAT_4_FAN_SPEED 160
 
 // @section motion
 
