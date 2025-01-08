@@ -1955,11 +1955,11 @@
   // a feed tube. Requires 4 bytes SRAM per sensor, plus 4 bytes overhead.
   #define FILAMENT_RUNOUT_DISTANCE_MM 25  // MRiscoC Customizable by menu
 
-  #ifdef FILAMENT_RUNOUT_DISTANCE_MM
-    // Enable this option to use an encoder disc that toggles the runout pin
-    // as the filament moves. (Be sure to set FILAMENT_RUNOUT_DISTANCE_MM
-    // large enough to avoid false positives.)
-    //#define FILAMENT_MOTION_SENSOR
+#ifdef FILAMENT_RUNOUT_DISTANCE_MM
+// Enable this option to use an encoder disc that toggles the runout pin
+// as the filament moves. (Be sure to set FILAMENT_RUNOUT_DISTANCE_MM
+// large enough to avoid false positives.)
+#define FILAMENT_MOTION_SENSOR
 
     #if ENABLED(FILAMENT_MOTION_SENSOR)
       //#define FILAMENT_SWITCH_AND_MOTION
